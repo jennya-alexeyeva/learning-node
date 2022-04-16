@@ -12,5 +12,6 @@ app.use(bodyParser.json());
 helloController(app);
 userController(app);
 tuitsController(app);
+console.log(process.env.DB_CONNECTION_STRING);
 mongoose.connect(process.env.DB_CONNECTION_STRING || 'mongodb://localhost:27017/webdev');
 app.listen(process.env.PORT || 4000);
